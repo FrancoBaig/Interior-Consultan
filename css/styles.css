@@ -24,6 +24,13 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+.container .header #menu-btn {
+  display: none;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
 .container .header .logo {
   margin-left: 4.5rem;
   width: 6.375rem;
@@ -165,8 +172,41 @@ body {
   .container {
     grid-template-rows: repeat(3, auto);
   }
+  .container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .container .header .logo {
     margin: 0;
+  }
+  .container .header #menu-btn {
+    display: inline-block;
+    font-size: 1.875rem;
+    position: absolute;
+    right: 0.937rem;
+    z-index: 2;
+  }
+  .container .header .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .container .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #181719;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.31rem;
+  }
+  .container .header .navbar.active a {
+    color: #FFFFFF;
+    font-size: 1.25rem;
   }
   .container .content .text {
     padding-top: 2.75rem;
@@ -183,7 +223,7 @@ body {
     width: 24.063rem;
     height: 11.75rem;
     left: 12%;
-    bottom: 13%;
+    bottom: 11%;
   }
   .container .content .images .card #card-text {
     font-size: 1.5rem;
