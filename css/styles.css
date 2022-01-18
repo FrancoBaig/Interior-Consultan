@@ -17,7 +17,7 @@ body {
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 15.3125rem auto 9.375rem;
+  grid-template-rows: 15.31rem auto 9.375rem;
 }
 .container .header {
   grid-column: 1/-1;
@@ -50,7 +50,7 @@ body {
   height: 2.5rem;
 }
 .container .header .navbar a {
-  color: #bfbfbf;
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 1.125rem;
   font-family: "Montserrat";
@@ -99,17 +99,22 @@ body {
 }
 .container .content .images {
   grid-column: span 1;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: end;
 }
 .container .content .images .big-image {
+  grid-row: span 1;
   max-width: 46.25rem;
   max-height: 34.8125rem;
 }
 .container .content .images .card {
+  grid-row: span 1;
   background: #181719;
   box-shadow: 0px 4px 4px 0px #00000040;
   position: relative;
-  left: 40%;
-  bottom: 11%;
+  top: -5rem;
+  right: 1.875rem;
   width: 25.625rem;
   height: 11.875rem;
 }
@@ -155,6 +160,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  padding-top: 1rem;
   color: #bfbfbf;
   font-family: "Montserrat";
 }
@@ -222,8 +228,8 @@ body {
   .container .content .images .card {
     width: 24.063rem;
     height: 11.75rem;
-    left: 12%;
-    bottom: 11%;
+    top: -3.125rem;
+    right: 0.9375rem;
   }
   .container .content .images .card #card-text {
     font-size: 1.5rem;
@@ -245,10 +251,6 @@ body {
   .container .content {
     padding: 0;
     grid-template-columns: 1fr;
-  }
-  .container .content .images {
-    display: flex;
-    flex-direction: column;
   }
   .container .content .images .big-image {
     max-width: 100%;

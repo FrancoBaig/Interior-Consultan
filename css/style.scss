@@ -1,4 +1,4 @@
-$primary-color: #FFFFFF;
+$principal-color: #FFFFFF;
 $secondary-color: #bfbfbf;
 
 $crimson-font: 'Crimson Pro';
@@ -25,8 +25,7 @@ body{
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 15.3125rem auto 9.375rem;
-    // font-size: 1rem;
+    grid-template-rows: 15.31rem auto 9.375rem;
 
     .header{
         grid-column: 1 / -1;
@@ -37,7 +36,7 @@ body{
         #menu-btn{
             display: none;
             cursor: pointer;
-            color: $primary-color;
+            color: $principal-color;
             font-size: 1.5rem;
             margin: .5rem;
         }
@@ -47,10 +46,9 @@ body{
             margin-left: 4.5rem;
             width: 6.375rem;
             height: 2rem;
-            border: 1px solid $primary-color;
-            color: $primary-color;
+            border: 1px solid $principal-color;
+            color: $principal-color;
 
-            // font-size: 0.875rem;
             font-size: 1rem;
             font-weight: 200;
             line-height: 2rem;
@@ -66,7 +64,7 @@ body{
 
 
             a {
-                color: $secondary-color;
+                color: $principal-color;
                 text-decoration: none;
                 
                 font-size: 1.125rem;
@@ -98,13 +96,13 @@ body{
                 font-family: $lora-font;
                 font-weight: 500;
                 font-size: 3rem;
-                color: $primary-color;
+                color: $principal-color;
             }
             
             #description{
                 width: 25.625rem;
                 font-family: $monse-font;
-                color: $primary-color;
+                color: $principal-color;
                 font-size: 1.5rem;
                 font-weight: 400;
                 padding: 3.125rem 0;
@@ -118,7 +116,7 @@ body{
                 font-family: $monse-font;
                 font-weight: 700;
                 font-size: 1.125rem;
-                color: $primary-color;
+                color: $principal-color;
                 
                 i {
                     padding-left: 0.75rem;
@@ -130,27 +128,31 @@ body{
         .images{
             grid-column: span 1;
 
+            display: grid;
+            grid-template-rows: 1fr auto;
+            justify-items: end;
+
+
             .big-image{
+                grid-row: span 1;
                 max-width: 46.25rem;
                 max-height: 34.8125rem;
             }
 
             .card{
+                grid-row: span 1;
+
                 background: #181719;
                 box-shadow: 0px 4px 4px 0px #00000040;
 
-
                 position: relative;
-                left: 40%;
-                bottom: 11%;
+                top: -5rem;
+                right: 1.875rem;
 
 
                 width: 25.625rem;
                 height: 11.875rem;
 
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: space-evenly;
 
                 .designer{
                     display: flex;
@@ -174,7 +176,7 @@ body{
                             font-family: $monse-font;
                             font-weight: 500;
                             font-size: 0.875rem;
-                            color: $primary-color;
+                            color: $principal-color;
                         }
 
                         #job{
@@ -192,7 +194,7 @@ body{
                     font-family: $lora-font;
                     font-weight: 700;
                     font-size: 1.5rem;
-                    color: $primary-color;
+                    color: $principal-color;
                     
                 }
 
@@ -206,6 +208,8 @@ body{
         justify-content: center;
         align-items: flex-end;
 
+        padding-top: 1rem;
+
 
         color: $secondary-color;
         font-family: $monse-font;
@@ -213,10 +217,12 @@ body{
         span{
             text-decoration: underline;
             text-underline-offset: 3px;
-            color: $primary-color;
+            color: $principal-color;
         }
     }
 }
+
+
 
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
@@ -266,7 +272,7 @@ body{
 
                     
                     a {
-                        color: $primary-color; 
+                        color: $principal-color; 
                         font-size: 1.25rem;
                     }
 
@@ -294,8 +300,9 @@ body{
                 .card{
                     width: 24.063rem;
                     height: 11.75rem;
-                    left: 12%;
-                    bottom: 11%;
+                    
+                    top: -3.125rem;
+                    right: 0.9375rem;
                     
 
 
@@ -324,7 +331,6 @@ body{
             .logo{
                 margin: 0;
             }
-            
         }
 
         .content{
@@ -332,8 +338,7 @@ body{
             grid-template-columns: 1fr;
 
             .images {
-                display: flex;
-                flex-direction: column;
+
                 .big-image{
                     max-width: 100%;
                     max-height: 100%;
