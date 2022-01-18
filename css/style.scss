@@ -10,18 +10,23 @@ $lora-font: 'Lora';
     padding: 0;
 }
 
+html{
+    font-size: 16px;
+}
+
 body{
     background: #181719;
 }
 
 .container{
     width: 90%;
-    max-width: 1440px;
+    max-width: 90rem;
     margin: 2rem auto;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 245px 1fr 150px;
+    grid-template-rows: 15.3125rem auto 9.375rem;
+    // font-size: 1rem;
 
     .header{
         grid-column: 1 / -1;
@@ -30,15 +35,16 @@ body{
 
 
         .logo{
-            margin-left: 72px;
-            width: 102px;
-            height: 32px;
+            margin-left: 4.5rem;
+            width: 6.375rem;
+            height: 2rem;
             border: 1px solid $primary-color;
             color: $primary-color;
 
-            font-size: 14px;
+            // font-size: 0.875rem;
+            font-size: 1rem;
             font-weight: 200;
-            line-height: 32px;
+            line-height: 2rem;
             text-align: center;
             font-family: $crimson-font;
         }
@@ -47,20 +53,20 @@ body{
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            height: 40px;
+            height: 2.5rem;
 
 
             a {
                 color: $secondary-color;
                 text-decoration: none;
                 
-                font-size: 18px;
+                font-size: 1.125rem;
                 font-family: $monse-font;
                 text-transform: capitalize;
 
                 &:hover{
                     text-decoration: underline;
-                    text-underline-offset: 0.5rem;
+                    text-underline-offset: 8px;
                     font-weight: bold;
                 }
             }
@@ -69,7 +75,7 @@ body{
     }
 
     .content{
-        padding: 0 70px;
+        padding: 0 4.375rem;
         grid-column: span 2;
         
         display: grid;
@@ -77,22 +83,22 @@ body{
 
         .text{
             grid-column: 1 / 1;
-            padding-top: 140px;
+            padding-top: 8.75rem;
 
             #title{
                 font-family: $lora-font;
                 font-weight: 500;
-                font-size: 48px;
+                font-size: 3rem;
                 color: $primary-color;
             }
             
             #description{
-                width: 410px;
+                width: 25.625rem;
                 font-family: $monse-font;
                 color: $primary-color;
-                font-size: 24px;
+                font-size: 1.5rem;
                 font-weight: 400;
-                padding: 50px 0;
+                padding: 3.125rem 0;
             }
             
 
@@ -102,12 +108,12 @@ body{
 
                 font-family: $monse-font;
                 font-weight: 700;
-                font-size: 18px;
+                font-size: 1.125rem;
                 color: $primary-color;
                 
                 i {
-                    padding-left: 12px;
-                    font-size: 21px;
+                    padding-left: 0.75rem;
+                    font-size: 1.3125rem;
                 }
             }
         }
@@ -116,8 +122,8 @@ body{
             grid-column: span 1;
 
             .big-image{
-                max-width: 740px;
-                max-height: 557px;
+                max-width: 46.25rem;
+                max-height: 34.8125rem;
             }
 
             .card{
@@ -130,8 +136,8 @@ body{
                 bottom: 11%;
 
 
-                width: 410px;
-                height: 190px;
+                width: 25.625rem;
+                height: 11.875rem;
 
                 // display: flex;
                 // flex-direction: column;
@@ -140,8 +146,8 @@ body{
                 .designer{
                     display: flex;
                     align-items: center;
-                    gap: 20px;
-                    padding: 15px 30px ;
+                    gap: 1.25rem;
+                    padding: 0.9375rem 1.875rem ;
 
                     #photo{
                         border-radius: 50%;
@@ -152,31 +158,31 @@ body{
                     .sub-text{
                         display: flex;
                         flex-direction: column;
-                        height: 40px;
+                        height: 2.5rem;
                         justify-content: space-between;
 
                         #name{
                             font-family: $monse-font;
                             font-weight: 500;
-                            font-size: 14px;
+                            font-size: 0.875rem;
                             color: $primary-color;
                         }
 
                         #job{
                             font-family: $monse-font;
                             font-weight: 500;
-                            font-size: 12px;
+                            font-size: 0.75rem;
                             color: #828282;
                         }
                     }
                 }
 
                 #card-text{
-                    width: 287px;
-                    padding: 25px;
+                    width: 17.9375rem;
+                    padding: 1.5625rem;
                     font-family: $lora-font;
                     font-weight: 700;
-                    font-size: 24px;
+                    font-size: 1.5rem;
                     color: $primary-color;
                     
                 }
@@ -200,5 +206,107 @@ body{
             text-underline-offset: 3px;
             color: $primary-color;
         }
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    html {
+        font-size: 0.5rem;
+    }
+
+    .container{
+        grid-template-rows: repeat(3, auto);
+
+        .header{
+            .logo{
+                margin: 0;
+            }
+        }
+
+        .content {
+            .text{
+                padding-top: 2.75rem;
+
+                #description{
+                    width: 19.531rem;
+                    padding: 1.875rem 0;
+                    font-size: 1.1rem;
+                }
+
+                .read-more{
+                    padding-bottom: 2.5rem;
+                }
+            }
+            
+            .images{
+                .card{
+                    width: 24.063rem;
+                    height: 11.75rem;
+
+                    left: 12%;
+                    bottom: 13%;
+
+                    #card-text{
+                        font-size: 1.5rem;
+                        padding: 0.1rem 1.56rem;
+                    }
+                }
+            }
+        }
+    }
+    
+ }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    html{
+        font-size: 0.8rem;
+    }
+
+    .container{
+        width: 95%;
+        grid-template-rows: repeat(3, auto);
+        
+        .header{
+            .logo{
+                margin: 0;
+            }
+        }
+
+        .content{
+            padding: 0;
+            grid-template-columns: 1fr;
+
+            .images {
+                display: flex;
+                flex-direction: column;
+                .big-image{
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    html {
+        font-size: 0.59rem;
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (min-width: 992px) and (max-width: 1199px) {
+    html {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    html {
+        font-size: 0.875rem;
     }
 }
